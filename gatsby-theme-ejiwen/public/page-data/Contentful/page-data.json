@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-post-js","path":"/Contentful","result":{"pageContext":{}},"staticQueryHashes":[]}
+{"componentChunkName":"component---src-templates-post-js","path":"/Contentful","result":{"data":{"contentfulBlogPost":{"title":"A Contentful Blog Post","slug":"Contentful","publishedDate":"2020-05-12T00:00-07:00"}},"pageContext":{"slug":"Contentful"}},"staticQueryHashes":[]}

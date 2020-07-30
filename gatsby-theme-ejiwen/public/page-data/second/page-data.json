@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-post-js","path":"/second","result":{"pageContext":{}},"staticQueryHashes":[]}
+{"componentChunkName":"component---src-templates-post-js","path":"/second","result":{"data":{"contentfulBlogPost":{"title":"Second blog post ","slug":"second","publishedDate":"2020-05-10T10:00-07:00"}},"pageContext":{"slug":"second"}},"staticQueryHashes":[]}
