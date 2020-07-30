@@ -1,3 +1,9 @@
+// First : install 
+// npm install --save gatsby-image
+// and npm install --save gatsby-transformer-sharp gatsby-plugin-sharp
+// Then in your gatsby-config.js add : plugins: [`gatsby-transformer-sharp`, `gatsby-plugin-sharp`]
+
+
 import React from "react";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
@@ -32,6 +38,7 @@ const Post = ({data: {post}}) => {
         <article>
             <h2> {post.title} </h2>
             <span> {post.dp} </span>
+    {/* add Options in the listes of parameters */}
             <div> { documentToReactComponents(post.body.json, options) } </div>
         </article>
     )
