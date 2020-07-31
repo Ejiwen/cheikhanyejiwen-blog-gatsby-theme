@@ -1,23 +1,23 @@
 import React from "react";
-import Post from "../components/post";
+import PostList from "../components/post-list";
+import { graphql, useStaticQuery} from 'gatsby';
 
-export const query = graphql`
-  {
-    allContentfulBlogPost(sort: {fields: publishedDate, order: DESC}) {
-      nodes {
-        title
-        slug
-        publishedDate(fromNow: true)
-        id
+const Posts = () => {
+    const data = useStaticQuery(graphql`
+    {
+      allContentfulBlogPost(sort: {fields: publishedDate, order: DESC}) {
+        nodes {
+          title
+          slug
+          publishedDate
+        }
       }
     }
-  }
-  `
+  `)
 
-
-const Posts = ({data: {allContentfulBlogPost: {nodes}}}) => (
-    nodes.map(post => <Post key={post.id} post={post} />)
-)
+  const posts = data.allContentfulBlogPost.nodes;
+  return <PostList posts={posts} />
+}
 
 
 
