@@ -2,8 +2,8 @@ import React from "react";
 import BlogPost from "../components/BlogPost"
 
 export const query = graphql`
-  query($slug: String!) {
-    post : contentfulBlogPost(slug: { eq: $slug }) {
+  query($slugID: String!) {
+    post : contentfulBlogPost(slug: { eq: $slugID }) {
         title
         slug
         dp: publishedDate

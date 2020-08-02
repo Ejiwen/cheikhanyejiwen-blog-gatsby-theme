@@ -45,11 +45,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   
       actions.createPage({
         path: slug,
-        component: require.resolve("./src/templates/postTest.js"),
+        component: require.resolve("./src/templates/post.js"),
         context: {
           slugID: post.slug,
-          // pass value from context to the template page "postTest page"
-          house: "something to shown" ,
         },
       })
     })
