@@ -1,6 +1,7 @@
 import React from "react";
 import PostList from "../components/post-list";
 import { graphql, useStaticQuery} from 'gatsby';
+import Layout from "../components/Layout";
 
 const Posts = () => {
     const data = useStaticQuery(graphql`
@@ -16,7 +17,7 @@ const Posts = () => {
   `)
 
   const posts = data.allContentfulBlogPost.nodes;
-  return <PostList posts={posts} />
+  return <Layout><PostList posts={posts} /></Layout> 
 }
 
 

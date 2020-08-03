@@ -1,5 +1,6 @@
 import React from "react";
 import BlogPost from "../components/BlogPost"
+import Layout from "../components/Layout";
 
 export const query = graphql`
   query($slugID: String!) {
@@ -17,7 +18,8 @@ export const query = graphql`
 const Post = ({data: {post}}) => {
 
     return (
-        <BlogPost post={post} />
+      <Layout><BlogPost post={post} /></Layout>
+        
     )
 }
 
