@@ -1,8 +1,8 @@
 const fs = require("fs")
 
 // Make sure the data directory exists
-exports.onPreBootstrap = ({ reporter }) => {
-  const contentPath = "data"
+exports.onPreBootstrap = ({ reporter }, options) => {
+  const contentPath = options.contentPath || "data"
 
   if (!fs.existsSync(contentPath)) {
     reporter.info(`creating the ${contentPath} directory`)
@@ -13,8 +13,8 @@ exports.onPreBootstrap = ({ reporter }) => {
 // Create pages from contentful 
 // It is gonna be a great work if i do that correctly ....
 // query for events and create pages
-exports.createPages = async ({ actions, graphql, reporter }) => {
-    const basePath = "/"
+exports.createPages = async ({ actions, graphql, reporter }, options) => {
+    const basePath = options.basePath || "/"
     actions.createPage({
       path: basePath,
       component: require.resolve("./src/templates/posts.js"),

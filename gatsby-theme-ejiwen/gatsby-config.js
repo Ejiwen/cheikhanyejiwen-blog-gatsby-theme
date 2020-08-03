@@ -1,11 +1,12 @@
-module.exports = {
+module.exports = ({contentPath = 'data', basePath= '/'}) => ({
     plugins: [
       `gatsby-transformer-sharp`, 
       `gatsby-plugin-sharp`,
+      'gatsby-theme-ui',
         {
             resolve: "gatsby-source-filesystem",
             options: {
-              path: "data",
+              path: contentPath
             },
           },
         {
@@ -16,4 +17,4 @@ module.exports = {
           },
         },
       ]
-}
+})
